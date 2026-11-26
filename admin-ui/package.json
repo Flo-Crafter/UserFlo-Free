@@ -1,0 +1,17 @@
+{
+  "name": "userflo-admin-ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "React + TypeScript admin dashboard for UserFlo. React itself is provided by WordPress (wp-element); the built bundle is committed to userflo/assets/admin/.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.6.0"
+  }
+}

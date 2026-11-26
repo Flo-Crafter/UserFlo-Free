@@ -1,0 +1,2 @@
+MaxMind DB Reader (maxmind-db/reader 1.x), Apache License 2.0, https://github.com/maxmind/MaxMind-DB-Reader-php
+Bundled unmodified.
