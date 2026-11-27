@@ -135,7 +135,7 @@ function ElementList(p: { days: number; setDays: (n: number) => void; onOpen: (i
   return (
     <div>
       <h1 className="uf-title">{__('Elements')}</h1>
-      <p className="uf-sub">{__('The buttons, links, forms, images, files and videos UserFlo found on your pages, with how visitors use them. “Not in inventory” means visitors used it but the scan did not find it, for example a button added by script.')}</p>
+      <p className="uf-sub">{__('The buttons, links, forms, images, files and videos FloLens found on your pages, with how visitors use them. “Not in inventory” means visitors used it but the scan did not find it, for example a button added by script.')}</p>
       <div className="uf-filter">
         {presets.map(([n, l]) => <button key={n} type="button" className={'button' + (p.days === n ? ' button-primary' : '')} onClick={() => { p.setDays(n); setPage(1); }}>{l}</button>)}
         <label className="screen-reader-text" htmlFor="uf-el-kind">{__('Kind of element')}</label>
@@ -148,7 +148,7 @@ function ElementList(p: { days: number; setDays: (n: number) => void; onOpen: (i
         <input id="uf-el-search" type="search" className="regular-text" placeholder={__('Search name, note, label, identifier or address…')} value={input} onInput={(e) => setInput((e.target as HTMLInputElement).value)} />
         <label><input type="checkbox" checked={tech} onChange={(e) => { const on = (e.target as HTMLInputElement).checked; setTech(on); saveTech(on); }} /> {__('Show technical details')}</label>
       </div>
-      <Async q={q} empty={(d) => d.items.length === 0 && d.audit.pages === 0} emptyText={__('Nothing has been scanned yet. UserFlo reads a few pages at a time in the background; the first elements appear within the hour. Interactions visitors have already made show up as soon as there are some.')}>
+      <Async q={q} empty={(d) => d.items.length === 0 && d.audit.pages === 0} emptyText={__('Nothing has been scanned yet. FloLens reads a few pages at a time in the background; the first elements appear within the hour. Interactions visitors have already made show up as soon as there are some.')}>
         {(d) => (
           <div>
             {d.items.length === 0 ? <Empty>{__('No elements match.')}</Empty> : (

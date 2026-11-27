@@ -1,7 +1,7 @@
 import type * as React from 'react';
 
 /**
- * Extension points filled by UserFlo Pro's admin bundle (pro.js), which WordPress loads before this app when Pro is active and
+ * Extension points filled by FloLens Pro's admin bundle (pro.js), which WordPress loads before this app when Pro is active and
  * entitled. In Lite every slot is empty, the matching views render nothing, and none of the Pro UI code is part of this bundle.
  */
 export interface Slots {

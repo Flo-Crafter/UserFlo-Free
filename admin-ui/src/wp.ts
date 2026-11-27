@@ -41,7 +41,7 @@ export interface AppConfig {
   tablePrefs?: Record<string, { order: string[]; hidden: string[] }>;
   /** Owner's choice (Settings -> Branding and appearance): animate charts, tables and the map. Absent means on. */
   animations?: boolean;
-  /** The flag sprite (one SVG file shipped with UserFlo). */
+  /** The flag sprite (one SVG file shipped with FloLens). */
   flagsUrl?: string;
 }
 
@@ -54,12 +54,12 @@ export const render = (el as unknown as { render: (n: React.ReactNode, c: Elemen
 export const createRoot = (el as unknown as { createRoot?: (c: Element) => { render: (n: React.ReactNode) => void } }).createRoot;
 
 const i18n = window.wp.i18n;
-export const __ = (s: string): string => i18n.__(s, 'userflo');
-export const _n = (a: string, b: string, n: number): string => i18n._n(a, b, n, 'userflo');
+export const __ = (s: string): string => i18n.__(s, 'flolens');
+export const _n = (a: string, b: string, n: number): string => i18n._n(a, b, n, 'flolens');
 export const sprintf = (f: string, ...a: unknown[]): string => i18n.sprintf(f, ...a);
 export const cfg = (): AppConfig => window.userfloApp;
 
-/** Address of another UserFlo screen (slug without the userflo- prefix). */
+/** Address of another FloLens screen (slug without the userflo- prefix). */
 export const screen = (slug: string): string => 'admin.php?page=userflo' + (slug ? '-' + slug : '');
 /** Whether a switchable section is on. Defaults to on when the server did not say. */
 export const modOn = (key: string): boolean => !cfg().modules || cfg().modules![key] !== false;

@@ -30,7 +30,7 @@ export interface Visitor {
   id: number; uid: string; label: string; logged_in: boolean; returning: boolean; email: string | null;
   first_seen: string; last_seen: string; sessions: number; pageviews: number; events: number; engaged: number;
   device: string; browser: string; os: string; location: string;
-  /** Two-letter code of a country UserFlo knows ('' when unknown) and its name, for the flag. */
+  /** Two-letter code of a country FloLens knows ('' when unknown) and its name, for the flag. */
   country?: string | null; country_name?: string;
 }
 export interface VisitorDetail extends Visitor {
@@ -294,7 +294,7 @@ export interface ElementDetailData {
   goals?: { state: string; sessions: number; goals: { goal: string; with: number; without: number; completions_with: number }[] }; findings?: AuditFinding[];
 }
 
-/** The 3D globe (Pro) is drawn by a component UserFlo Pro registers; these are the shapes the Map screen hands to it. */
+/** The 3D globe (Pro) is drawn by a component FloLens Pro registers; these are the shapes the Map screen hands to it. */
 export interface GlobePlace { key: string; title: string; lat: number; lon: number; visitors: number; sessions: number }
 export interface GlobeHandle {
   focus(lat: number, lon: number): void;

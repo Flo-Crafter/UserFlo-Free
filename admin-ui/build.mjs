@@ -2,7 +2,7 @@ import { build, context } from 'esbuild';
 import { gzipSync } from 'node:zlib';
 import { readFileSync } from 'node:fs';
 
-// The admin app of the free UserFlo plugin. React itself is provided by WordPress (wp-element).
+// The admin app of the free FloLens plugin. React itself is provided by WordPress (wp-element).
 const opts = {
   entryPoints: ['src/index.tsx'],
   bundle: true,
@@ -11,7 +11,7 @@ const opts = {
   jsx: 'transform',
   jsxFactory: 'h',
   jsxFragment: 'Fragment',
-  outfile: '../userflo/assets/admin/app.js',
+  outfile: '../flolens/assets/admin/app.js',
   legalComments: 'none',
   logLevel: 'info',
 };

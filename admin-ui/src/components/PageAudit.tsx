@@ -31,7 +31,7 @@ export function PageAudit(p: { url: string; days: number }) {
       <Async q={q}>
         {(d) => {
           const row = d.items.find((r) => r.url === p.url);
-          if (!row) { return <div><Empty>{__('This page has not been scanned yet. UserFlo reads a few pages at a time in the background.')}</Empty><ScanButton url={p.url} onDone={q.reload} /></div>; }
+          if (!row) { return <div><Empty>{__('This page has not been scanned yet. FloLens reads a few pages at a time in the background.')}</Empty><ScanButton url={p.url} onDone={q.reload} /></div>; }
           const active = row.findings.filter((f) => !f.excluded);
           return (
             <div>

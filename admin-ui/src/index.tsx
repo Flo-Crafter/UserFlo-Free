@@ -68,7 +68,7 @@ function WithExport(p: { view: string; children: React.ReactNode }) {
     return () => window.removeEventListener('hashchange', on);
   }, []);
   const sets = exportSetsFor(p.view);
-  // The button sits in the UserFlo bar at the top, next to the distraction-free button (an empty placeholder is printed there).
+  // The button sits in the FloLens bar at the top, next to the distraction-free button (an empty placeholder is printed there).
   const slot = document.getElementById('uf-brand-export');
   const profile = p.view === 'visitors' && parseHash(hash).visitor !== null;
   const detail = p.view === 'pages' && /^#\/p\//.test(hash);

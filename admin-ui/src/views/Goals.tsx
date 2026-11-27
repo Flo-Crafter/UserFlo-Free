@@ -90,7 +90,7 @@ function Breakdown(p: { goal: Goal; days: number }) {
   );
 }
 
-/** Goals: define outcomes, see completions and conversion rates. With UserFlo Pro the complete screen (funnels, targets and more) replaces this one. */
+/** Goals: define outcomes, see completions and conversion rates. With FloLens Pro the complete screen (funnels, targets and more) replaces this one. */
 export function Goals() {
   const Full = slots().GoalsFull;
   if (Full) { return <Full />; }

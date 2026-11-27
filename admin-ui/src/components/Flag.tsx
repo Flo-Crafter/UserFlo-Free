@@ -2,7 +2,7 @@ import { h, __, useState, useEffect, cfg } from '../wp';
 import { flagCode } from '../columnOrder';
 
 /**
- * The national flag beside a country, drawn from one local SVG file that ships with UserFlo (no image requests to other sites, no emoji
+ * The national flag beside a country, drawn from one local SVG file that ships with FloLens (no image requests to other sites, no emoji
  * fonts, so it looks the same in every browser and operating system). The file is fetched once, only when a screen shows a flag, and
  * placed in the page; each flag then refers to it. When the file cannot be loaded, or the country has no flag in it, nothing is drawn and
  * the country name next to it still tells the story.

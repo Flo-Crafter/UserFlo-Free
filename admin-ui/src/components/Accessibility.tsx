@@ -17,7 +17,7 @@ export function WcagChips(p: { wcag: Wcag[] | undefined }) {
 
 /** The standing honesty note: shown wherever accessibility results appear. */
 export function A11yNote() {
-  return <p className="uf-sub">{__('Automated checks find some accessibility problems and flag others for review, but they cannot establish WCAG conformance: many criteria need a person using the page with a keyboard and a screen reader. “Passed” means only that the condition tested was met. UserFlo reads the HTML your server sends, so anything added by JavaScript or set in style sheets it does not read is not seen.')}</p>;
+  return <p className="uf-sub">{__('Automated checks find some accessibility problems and flag others for review, but they cannot establish WCAG conformance: many criteria need a person using the page with a keyboard and a screen reader. “Passed” means only that the condition tested was met. FloLens reads the HTML your server sends, so anything added by JavaScript or set in style sheets it does not read is not seen.')}</p>;
 }
 
 export function ManualList(p: { topics: ManualTopic[] }) {
@@ -64,7 +64,7 @@ export function A11yPage(p: { findings: AuditFinding[]; checklist: A11yCheckRow[
       })}
       {!p.findings.length ? <p>{__('The automated accessibility checks found nothing on this page. This is not a statement that the page is accessible.')}</p> : null}
       {passed.length ? <details className="uf-finding-more"><summary>{sprintf(__('Passed automated checks (%d)'), passed.length)}</summary><ul>{passed.map((c) => <li key={c.code}>{c.title} <WcagChips wcag={c.wcag} /> <small>{sprintf(__('%d tested'), c.tested)}</small></li>)}</ul></details> : null}
-      {untested.length ? <details className="uf-finding-more"><summary>{sprintf(__('Not tested on this page (%d)'), untested.length)}</summary><ul>{untested.map((c) => <li key={c.code}>{c.title} <WcagChips wcag={c.wcag} /></li>)}</ul><p className="uf-sub">{__('UserFlo could not make these checks from the page HTML (for example, no text colours or backgrounds were set directly on the page, or the page uses style sheets UserFlo does not read). They are not passed.')}</p></details> : null}
+      {untested.length ? <details className="uf-finding-more"><summary>{sprintf(__('Not tested on this page (%d)'), untested.length)}</summary><ul>{untested.map((c) => <li key={c.code}>{c.title} <WcagChips wcag={c.wcag} /></li>)}</ul><p className="uf-sub">{__('FloLens could not make these checks from the page HTML (for example, no text colours or backgrounds were set directly on the page, or the page uses style sheets FloLens does not read). They are not passed.')}</p></details> : null}
       <ManualList topics={p.manual} />
     </Card>
   );

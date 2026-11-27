@@ -23,7 +23,7 @@ export function PageHealth(p: { days: number; onOpen: (url: string) => void }) {
   const Full = can('page_audit') && modOn('page_intelligence') ? slots().PageIntelligence : undefined;
   return (
     <div>
-      <p className="uf-sub">{__('UserFlo reads your own pages a few at a time, as a visitor would see them, and checks what it can. It never changes anything. A page is red when a verified issue was found, amber for warnings only.')}</p>
+      <p className="uf-sub">{__('FloLens reads your own pages a few at a time, as a visitor would see them, and checks what it can. It never changes anything. A page is red when a verified issue was found, amber for warnings only.')}</p>
       <Async q={sum}>
         {(s) => (
           <div>
@@ -38,7 +38,7 @@ export function PageHealth(p: { days: number; onOpen: (url: string) => void }) {
               {s.last_scan ? sprintf(__('Last scan: %s.'), dateTime(s.last_scan + ' UTC')) : __('Nothing scanned yet; the first pages are read within the hour.')} {s.due ? sprintf(__('%d pages are waiting.'), s.due) : ''}
               {s.cap ? ' ' + sprintf(__('This edition keeps up to %d pages in the inventory.'), s.cap) : ''}
             </p>
-            {s.seo.both ? <div className="notice notice-warning inline" role="status"><p>{sprintf(__('%s are both active. Their tags may duplicate each other; UserFlo does not decide which is right, so please review the configuration.'), s.seo.names.join(' + '))}</p></div> : null}
+            {s.seo.both ? <div className="notice notice-warning inline" role="status"><p>{sprintf(__('%s are both active. Their tags may duplicate each other; FloLens does not decide which is right, so please review the configuration.'), s.seo.names.join(' + '))}</p></div> : null}
           </div>
         )}
       </Async>

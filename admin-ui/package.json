@@ -1,8 +1,8 @@
 {
-  "name": "userflo-admin-ui",
+  "name": "flolens-admin-ui",
   "private": true,
   "version": "0.1.0",
-  "description": "React + TypeScript admin dashboard for UserFlo. React itself is provided by WordPress (wp-element); the built bundle is committed to userflo/assets/admin/.",
+  "description": "React + TypeScript admin dashboard for FloLens. React itself is provided by WordPress (wp-element); the built bundle is committed to flolens/assets/admin/.",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "node build.mjs",

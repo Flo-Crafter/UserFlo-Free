@@ -72,7 +72,7 @@ function JourneysBasic() {
                 })()}
               </div>) },
                 { id: 'exits', title: __('Recorded session exits'), node: (<div>
-                <p className="uf-sub">{sprintf(__('The last page recorded in a session (%s sessions in this view). UserFlo only knows that no later page view was recorded; it cannot tell whether the visitor decided to leave.'), num(r.exits.total))}</p>
+                <p className="uf-sub">{sprintf(__('The last page recorded in a session (%s sessions in this view). FloLens only knows that no later page view was recorded; it cannot tell whether the visitor decided to leave.'), num(r.exits.total))}</p>
                 <div className="uf-scroll"><table className="widefat striped uf-compact">
                   <thead><tr><th scope="col">{__('Last recorded page')}</th><th scope="col">{__('Recorded exits')}</th><th scope="col">{__('Share of all recorded exits')}</th><th scope="col">{__('Exits per view of this page')}</th></tr></thead>
                   <tbody>{r.exits.items.map((e) => (
@@ -93,7 +93,7 @@ function JourneysBasic() {
                   <li>{__('Everything counts sessions: a visit is counted once however many pages it viewed. A session belongs to the day it started.')}</li>
                   <li>{__('A session’s path is its page views in time order. Reloading the same page does not add a step; coming back to a page later does.')}</li>
                   <li>{__('The entrance is the first page recorded, the exit the last. They come from the ordered page views, so they can differ slightly from the Statistics screen, which reads the address of the last report received. Several tabs in one session are not told apart.')}</li>
-                  <li>{__('No conversions, revenue or attribution are shown: UserFlo does not record them for these paths.')}</li>
+                  <li>{__('No conversions, revenue or attribution are shown: FloLens does not record them for these paths.')}</li>
                 </ul>
               </details>
             </div>

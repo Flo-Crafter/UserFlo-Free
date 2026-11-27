@@ -7,7 +7,7 @@ import { num } from '../format';
 import type { TrafficDay } from '../types';
 
 /**
- * Traffic calendar in UserFlo Lite: one month at a time, page views, the current month and the two before it, no day or hour detail.
+ * Traffic calendar in FloLens Lite: one month at a time, page views, the current month and the two before it, no day or hour detail.
  * With Pro active and entitled, the Pro bundle supplies the full calendar and this wrapper hands over to it.
  */
 export function TrafficCalendar() {

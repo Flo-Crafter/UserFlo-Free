@@ -39,7 +39,7 @@ function GuideDialog(p: { slug: string; onClose: () => void }) {
   );
 }
 
-/** "Guide" button: opens this screen's guide in a dialog without leaving the page. The guide text is UserFlo's own bundled documentation. */
+/** "Guide" button: opens this screen's guide in a dialog without leaving the page. The guide text is FloLens's own bundled documentation. */
 export function GuideButton(p: { view: string }) {
   const slug = guideFor(p.view);
   const [open, setOpen] = useState(false);

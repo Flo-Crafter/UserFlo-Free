@@ -4,7 +4,7 @@ import type { ExternalAggregate } from '../types';
 import { dateTime, num } from '../format';
 import { Card } from '../components/ui';
 
-/** Imported aggregates from external services, shown separately: never merged with native UserFlo numbers. */
+/** Imported aggregates from external services, shown separately: never merged with native FloLens numbers. */
 export function External() {
   const q = useApi<{ items: ExternalAggregate[] }>('integrations/data');
   if (q.error || !q.data || q.data.items.length === 0) { return null; }
